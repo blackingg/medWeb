@@ -53,7 +53,7 @@ const VideoGrid = () => {
     {
       id: 2,
       title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
+      url: "https://www.youtube.com/watch?v=6HNFGLCaVFI",
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ const VideoGrid = () => {
     {
       id: 6,
       title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
+      url: "https://www.youtube.com/watch?v=6HNFGLCaVFI",
     },
   ];
 

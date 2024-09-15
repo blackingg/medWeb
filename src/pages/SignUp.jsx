@@ -37,7 +37,7 @@ const SignUp = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+            className="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600"
           >
             Sign Up
           </button>
@@ -46,7 +46,7 @@ const SignUp = () => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="text-blue-500"
+            className="text-purple-500"
           >
             Log In
           </Link>

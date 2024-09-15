@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Videos from "./pages/Videos";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route
           path="/signup"
           element={<SignUp />}
+        />
+        <Route
+          path="/videos"
+          element={<Videos />}
         />
       </Routes>
     </div>

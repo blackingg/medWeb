@@ -11,7 +11,7 @@ const Hero = () => {
         Access reliable medical information, connect with healthcare
         professionals, and manage your health efficiently.
       </p>
-      <button className="bg-blue-500 text-white font-bold py-4 lg:py-2 px-6 lg:px-4 rounded hover:bg-blue-600 transition duration-300 z-10">
+      <button className="bg-purple-500 text-white font-bold py-4 lg:py-2 px-6 lg:px-4 rounded hover:bg-purple-600 transition duration-300 z-10">
         Get Started
       </button>
     </div>

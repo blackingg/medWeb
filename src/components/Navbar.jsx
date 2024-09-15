@@ -49,7 +49,7 @@ const Navbar = () => {
                   key={item.to}
                   to={item.to}
                   onClick={handleLinkClick}
-                  className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 hover:text-purple-500 transition duration-300"
                 >
                   {item.name}
                 </Link>
@@ -58,14 +58,14 @@ const Navbar = () => {
                 <Link
                   to="/login"
                   onClick={handleLinkClick}
-                  className="py-4 px-2 w-full font-medium text-gray-500 hover:bg-blue-500 hover:text-white transition duration-300"
+                  className="py-4 px-2 w-full font-medium text-gray-500 hover:bg-purple-500 hover:text-white transition duration-300"
                 >
                   Log In
                 </Link>
                 <Link
                   to="/signup"
                   onClick={handleLinkClick}
-                  className="py-4 px-2 w-full font-medium text-white bg-blue-500 hover:bg-blue-400 transition duration-300"
+                  className="py-4 px-2 w-full font-medium text-white bg-purple-500 hover:bg-purple-400 transition duration-300"
                 >
                   Sign Up
                 </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
                   key={item.to}
                   to={item.to}
                   onClick={handleLinkClick}
-                  className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 hover:text-purple-500 transition duration-300"
                 >
                   {item.name}
                 </Link>
@@ -87,13 +87,13 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-3">
             <Link
               to="/login"
-              className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300"
+              className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-purple-500 hover:text-white transition duration-300"
             >
               Log In
             </Link>
             <Link
               to="/signup"
-              className="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300"
+              className="py-2 px-2 font-medium text-white bg-purple-800 rounded hover:bg-purple-900 transition duration-300"
             >
               Sign Up
             </Link>

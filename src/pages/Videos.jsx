@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { videos } from "../data";
 
 const VideoModal = ({ video, onClose }) => {
@@ -43,9 +42,10 @@ const VideoModal = ({ video, onClose }) => {
   );
 };
 
-const VideoGrid = () => {
+const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [visibleVideos, setVisibleVideos] = useState(6);
+  const [currentPage, setCurrentPage] = useState(1);
+  const videosPerPage = 6;
 
   const openVideo = (video) => {
     setSelectedVideo(video);
@@ -55,14 +55,22 @@ const VideoGrid = () => {
     setSelectedVideo(null);
   };
 
+  const indexOfLastVideo = currentPage * videosPerPage;
+  const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
+  const currentVideos = videos.slice(indexOfFirstVideo, indexOfLastVideo);
+
+  const totalPages = Math.ceil(videos.length / videosPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">Educational Videos</h2>
+      <h2 className="text-3xl font-bold mb-6">Videos</h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-        {videos.slice(0, visibleVideos).map((video) => (
+        {currentVideos.map((video) => (
           <div
             key={video.id}
-            className="relative bg-gray-100  rounded-lg overflow-hidden shadow-md cursor-pointer"
+            className="relative bg-gray-100 rounded-lg overflow-hidden shadow-md cursor-pointer"
             onClick={() => openVideo(video)}
           >
             <div className="relative aspect-w-16 aspect-h-9">
@@ -95,14 +103,20 @@ const VideoGrid = () => {
           </div>
         ))}
       </div>
-
-      <div className="mt-8 text-center">
-        <button
-          onClick={""}
-          className="bg-purple-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded"
-        >
-          <Link to={"/videos"}>Show More</Link>
-        </button>
+      <div className="mt-8 flex justify-center">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+          <button
+            key={number}
+            onClick={() => paginate(number)}
+            className={`mx-1 px-3 py-1 rounded ${
+              currentPage === number
+                ? "bg-purple-500 text-white"
+                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+            }`}
+          >
+            {number}
+          </button>
+        ))}
       </div>
       {selectedVideo && (
         <VideoModal
@@ -114,4 +128,4 @@ const VideoGrid = () => {
   );
 };
 
-export default VideoGrid;
+export default Videos;

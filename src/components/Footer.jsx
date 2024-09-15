@@ -1,10 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import getOnApple from "../assets/getOnApple.svg";
+import getOnPlaystore from "../assets/getOnPlaystore.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F0331] text-white">
-      <div className="container mx-auto px-6 py-10">
+    <footer className="relative bg-[#260e3b] text-white mt-16">
+      <div className="absolute container -top-[7%] translate-y-3/4 md:-top-1/4 md:translate-y-3/4 left-1/2 -translate-x-1/2 bg-purple-600 p-5 rounded-xl h-fit w-[60%]">
+        <div className="flex justify-center items-center space-x-4 ">
+          <button>
+            <Link to={"#"}>
+              <img
+                src={getOnPlaystore}
+                alt="getOnPlaystore"
+                className="w-full lg:w-[70%]"
+              />
+            </Link>
+          </button>
+          <button>
+            <Link to={"#"}>
+              <img
+                src={getOnApple}
+                alt="getOnApple"
+                className="w-full lg:w-[70%]"
+              />
+            </Link>
+          </button>
+        </div>
+      </div>
+      <div className="container mx-auto px-6 py-20">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/4 text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Links</h5>
@@ -19,10 +43,10 @@ const Footer = () => {
               </li>
               <li className="mt-2">
                 <Link
-                  to="/"
+                  to="/videos"
                   className="hover:underline"
                 >
-                  About
+                  Videos
                 </Link>
               </li>
               <li className="mt-2">

@@ -19,7 +19,7 @@ const Footer = () => {
               </li>
               <li className="mt-2">
                 <Link
-                  to="/about"
+                  to="/"
                   className="hover:underline"
                 >
                   About
@@ -27,7 +27,7 @@ const Footer = () => {
               </li>
               <li className="mt-2">
                 <Link
-                  to="/contact"
+                  to="/"
                   className="hover:underline"
                 >
                   Contact
@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="mb-4">
               <li className="mt-2">
                 <Link
-                  to="/terms"
+                  to="/"
                   className="hover:underline"
                 >
                   Terms of Use
@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
               <li className="mt-2">
                 <Link
-                  to="/privacy"
+                  to="/"
                   className="hover:underline"
                 >
                   Privacy Policy
@@ -90,7 +90,7 @@ const Footer = () => {
             <ul className="mb-4">
               <li className="mt-2">
                 <Link
-                  to="/blog"
+                  to="/"
                   className="hover:underline"
                 >
                   Blog
@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
               <li className="mt-2">
                 <Link
-                  to="/careers"
+                  to="/"
                   className="hover:underline"
                 >
                   Careers
@@ -113,6 +113,15 @@ const Footer = () => {
           <div className="sm:w-2/3 text-center py-6">
             <p className="text-sm text-white font-bold mb-2">
               © 2024 MedInfo. All rights reserved.
+            </p>
+            <p className="text-sm text-white font-bold mb-2">
+              Built with Love by Mubarak Odetunde:{" "}
+              <a
+                href="https://mubarakodetunde-portfolio.netlify.app"
+                className="hover:underline hover:text-green-300"
+              >
+                https://mubarakodetunde-portfolio.netlify.app
+              </a>
             </p>
           </div>
         </div>

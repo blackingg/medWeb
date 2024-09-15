@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Videos from "./pages/Videos";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           element={<Videos />}
         />
       </Routes>
+      <Footer/>
     </div>
   );
 }

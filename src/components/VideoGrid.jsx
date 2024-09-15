@@ -92,17 +92,32 @@ const VideoGrid = () => {
         {videos.map((video) => (
           <div
             key={video.id}
-            className="bg-gray-100 rounded-lg overflow-hidden shadow-md cursor-pointer"
+            className="relative bg-gray-100 rounded-lg overflow-hidden shadow-md cursor-pointer"
             onClick={() => openVideo(video)}
           >
-            <div className="aspect-w-16 aspect-h-9">
+            <div className="relative aspect-w-16 aspect-h-9">
               <img
                 src={`https://img.youtube.com/vi/${
                   video.url.split("v=")[1]
                 }/0.jpg`}
                 alt={video.title}
-                className="w-full h-full object-cover hover:brightness-50 transition-all"
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 hover:opacity-100 hover:backdrop-blur-sm">
+                <svg
+                  className="h-12 w-12 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 3l14 9-14 9V3z"
+                  />
+                </svg>
+              </div>
             </div>
             <div className="p-4">
               <h3 className="font-semibold text-lg mb-2">{video.title}</h3>

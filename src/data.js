@@ -1,6 +1,6 @@
 export const navItems = [
   { name: "Home", to: "/" },
-  { name: "Videos", to: "/videos" },
+  { name: "Videos", to: "/video" },
   { name: "Services", to: "/services" },
   { name: "Contact", to: "/contact" },
 ];

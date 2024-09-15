@@ -63,6 +63,41 @@ const Videos = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const getPageNumbers = () => {
+    const pageNumbers = [];
+    const showPages = 6;
+
+    if (totalPages <= showPages + 2) {
+      for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+      }
+    } else {
+      pageNumbers.push(1);
+
+      if (currentPage <= showPages - 2) {
+        for (let i = 2; i <= showPages; i++) {
+          pageNumbers.push(i);
+        }
+        pageNumbers.push("...");
+      } else if (currentPage > totalPages - showPages + 2) {
+        pageNumbers.push("...");
+        for (let i = totalPages - showPages + 1; i < totalPages; i++) {
+          pageNumbers.push(i);
+        }
+      } else {
+        pageNumbers.push("...");
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          pageNumbers.push(i);
+        }
+        pageNumbers.push("...");
+      }
+
+      pageNumbers.push(totalPages);
+    }
+
+    return pageNumbers;
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Videos</h2>
@@ -104,15 +139,18 @@ const Videos = () => {
         ))}
       </div>
       <div className="mt-8 flex justify-center">
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+        {getPageNumbers().map((number, index) => (
           <button
-            key={number}
-            onClick={() => paginate(number)}
+            key={index}
+            onClick={() => number !== "..." && paginate(number)}
             className={`mx-1 px-3 py-1 rounded ${
               currentPage === number
                 ? "bg-purple-500 text-white"
+                : number === "..."
+                ? "bg-gray-100 text-gray-700 cursor-default"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
+            disabled={number === "..."}
           >
             {number}
           </button>

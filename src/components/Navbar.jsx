@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { navItems } from "../data";
 import Search from "./Search";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
@@ -17,32 +30,58 @@ const Navbar = () => {
                   MedInfo
                 </span>
               </Link>
+              <div className="absolute right-0 top-0 z-20 md:hidden">
+                <button
+                  onClick={toggleMenu}
+                  className="text-gray-500 py-4 px-2"
+                >
+                  {isOpen ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
+                </button>
+              </div>
+            </div>
+            <div
+              className={`absolute flex flex-col md:hidden bg-white w-[40%] z-40 top-14 right-0 ${
+                isOpen ? "block" : "hidden"
+              }`}
+            >
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={handleLinkClick}
+                  className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="flex flex-col md:hidden items-center">
+                <Link
+                  to="/login"
+                  onClick={handleLinkClick}
+                  className="py-4 px-2 w-full font-medium text-gray-500 hover:bg-blue-500 hover:text-white transition duration-300"
+                >
+                  Log In
+                </Link>
+                <Link
+                  to="/signup"
+                  onClick={handleLinkClick}
+                  className="py-4 px-2 w-full font-medium text-white bg-blue-500 hover:bg-blue-400 transition duration-300"
+                >
+                  Sign Up
+                </Link>
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-1">
-              <Link
-                to="/"
-                className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
-              >
-                Home
-              </Link>
-              <Link
-                to="#"
-                className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
-              >
-                About
-              </Link>
-              <Link
-                to="#"
-                className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
-              >
-                Services
-              </Link>
-              <Link
-                to="#"
-                className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
-              >
-                Contact
-              </Link>
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={handleLinkClick}
+                  className="py-4 px-2 text-gray-500 hover:text-blue-500 transition duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-3">

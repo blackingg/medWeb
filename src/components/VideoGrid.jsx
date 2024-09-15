@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { videos } from "../data";
 
 const VideoModal = ({ video, onClose }) => {
   const embedUrl = video.url.replace("watch?v=", "embed/");
@@ -43,39 +44,6 @@ const VideoModal = ({ video, onClose }) => {
 
 const VideoGrid = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const videos = [
-    {
-      id: 1,
-      title: "Understanding Diabetes",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
-    },
-    {
-      id: 2,
-      title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=6HNFGLCaVFI",
-    },
-    {
-      id: 3,
-      title: "Mental Health Awareness",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
-    },
-    {
-      id: 4,
-      title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
-    },
-    {
-      id: 5,
-      title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=J8zhAWjpFaA",
-    },
-    {
-      id: 6,
-      title: "Heart Health Basics",
-      url: "https://www.youtube.com/watch?v=6HNFGLCaVFI",
-    },
-  ];
 
   const openVideo = (video) => {
     setSelectedVideo(video);

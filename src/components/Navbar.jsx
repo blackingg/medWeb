@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={`absolute flex flex-col md:hidden bg-gray-100 px-2 pb-2 w-[40%] z-40 top-14 right-0 rounded-b-md ${
+              className={`absolute flex flex-col md:hidden bg-gray-100 px-2 pb-2 w-[40%] z-40 top-[6.7%] right-0 rounded-b-md ${
                 isOpen ? "block" : "hidden"
               }`}
             >

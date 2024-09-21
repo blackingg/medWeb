@@ -34,87 +34,76 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 ">
-      <div className="w-full max-w-md space-y-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-purple-500">Contact Us</h1>
-        </div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold mb-6 text-center text-purple-500">
+          Contact Us
+        </h2>
 
         {isSubmitted && (
-          <div className="text-center text-green-600 font-bold">
+          <div className="mb-4 text-center text-green-600 font-bold">
             Message sent successfully!
           </div>
         )}
 
-        <form
-          onSubmit={handleSubmit}
-          className="mt-8 space-y-6 p-6 rounded-md bg-gray-50"
-        >
-          <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <label
-                htmlFor="name"
-                className="sr-only"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="appearance-none rounded-none relative block w-full px-3 py-2 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-0 focus:border-purple-500 border focus:border-2 focus:ring-purple-500 focus:z-10 sm:text-sm"
-                placeholder="Name"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="sr-only"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="appearance-none rounded-none relative block w-full mt-2 px-3 py-2 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-0 focus:border-purple-500 border focus:border-2 focus:ring-purple-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="sr-only"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                className="appearance-none rounded-none relative block w-full mt-2 px-3 py-2 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-0 focus:border-purple-500 border  focus:border-2 focus:ring-purple-500 focus:z-10 sm:text-sm"
-                placeholder="Your message"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <div>
-            <button
-              type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-gray-700"
             >
-              Send Message
-            </button>
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
+            />
           </div>
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="block text-gray-700"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition duration-300"
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </div>

@@ -119,6 +119,7 @@ const Footer = () => {
             <p className="text-sm text-white font-bold mb-2">
               Built with Love by Mubarak Odetunde:{" "}
               <a
+                target="_blank"
                 href="https://mubarakodetunde-portfolio.netlify.app"
                 className="hover:underline hover:text-green-300"
               >

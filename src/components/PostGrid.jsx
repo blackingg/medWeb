@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const PostGrid = () => {
   const navigate = useNavigate();
+  const [visiblePosts, setVisiblePosts] = useState(6);
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Blog posts</h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-        {BlogPost.map((post) => (
+        {BlogPost.slice(0, visiblePosts).map((post) => (
           <div
             key={post.id}
             className="block bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden cursor-pointer"

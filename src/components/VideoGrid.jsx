@@ -97,10 +97,7 @@ const VideoGrid = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <button
-          onClick={""}
-          className="bg-purple-500 hover:bg-[#260e3b] text-white font-bold py-2 px-4 rounded transition-all"
-        >
+        <button className="bg-purple-500 hover:bg-[#260e3b] text-white font-bold py-2 px-4 rounded transition-all">
           <Link to={"/videos"}>Show More</Link>
         </button>
       </div>

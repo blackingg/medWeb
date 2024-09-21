@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white mt-1">
+    <div className="flex justify-center items-center min-h-screen mt-1">
       <div className="w-full max-w-md bg-white p-8">
         <h2 className="text-2xl font-bold mb-6 text-center text-purple-500">
           Contact Us

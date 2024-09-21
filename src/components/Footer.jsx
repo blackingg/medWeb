@@ -40,9 +40,11 @@ const Footer = () => {
             <h5 className="uppercase mb-6 font-bold">Links</h5>
             <ul className="mb-4">
               {navItems.map((item) => (
-                <li className="mt-2">
+                <li
+                  key={item.name}
+                  className="mt-2"
+                >
                   <Link
-                    key={item.to}
                     to={item.to}
                     onClick={handleLinkClick}
                     className="hover:underline"
@@ -57,9 +59,12 @@ const Footer = () => {
             <h5 className="uppercase mb-6 font-bold">Legal</h5>
             <ul className="mb-4">
               {Legal.map((item) => (
-                <li className="mt-2">
+                <li
+                  key={item.name}
+                  className="mt-2"
+                >
                   <a
-                    key={item.name}
+                    id={item.name}
                     href={item.href}
                     onClick={handleLinkClick}
                     className="hover:underline"
@@ -74,9 +79,12 @@ const Footer = () => {
             <h5 className="uppercase mb-6 font-bold">Social</h5>
             <ul className="mb-4">
               {Socials.map((item) => (
-                <li className="mt-2">
+                <li
+                  key={item.name}
+                  className="mt-2"
+                >
                   <a
-                    key={item.name}
+                    id={item.name}
                     href={item.href}
                     onClick={handleLinkClick}
                     className="hover:underline"

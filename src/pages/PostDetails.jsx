@@ -70,12 +70,12 @@ const PostDetails = () => {
         </div>
       ) : (
         <p className="h-screen w-screen flex items-center justify-center gap-5">
-          <h1 className="text-4xl font-bold mb-4 text-[#B22222]">
+          <span className="text-4xl font-bold mb-4 text-purple-500">
             Post not found
-          </h1>
+          </span>
           <button
             onClick={handleBackClick}
-            className="mb-4 text-[#B22222] font-semibold hover:underline"
+            className="mb-4 text-purple-500 font-semibold hover:underline"
           >
             <IoArrowBackCircle size={30} />
           </button>

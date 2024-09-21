@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BlogPost } from "../data";
+import { useNavigate } from "react-router-dom";
 
 const PostGrid = () => {
+  const navigate = useNavigate();
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Blog posts</h1>
@@ -11,7 +13,7 @@ const PostGrid = () => {
           <div
             key={post.id}
             className="block bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden cursor-pointer"
-            onClick={() => navigate(`/Posts/${post.id}`)}
+            onClick={() => navigate(`/blog/${post.id}`)}
           >
             <img
               src={post.image}

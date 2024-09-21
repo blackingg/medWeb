@@ -10,7 +10,7 @@ const PostDetails = () => {
   const [post, setPost] = useState(null);
 
   const handleBackClick = () => {
-    navigate("/blog");
+    navigate(-1); // This navigates to the previous page
   };
 
   useEffect(() => {

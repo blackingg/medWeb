@@ -1,13 +1,18 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Videos from "./pages/Videos";
 import Footer from "./components/Footer";
+import Posts from "./pages/Posts";
+import PostDetails from "./pages/PostDetails";
 
 function App() {
+  const location = useLocation();
+  const showFooter = !location.pathname.startsWith("/blog/");
+
   return (
     <div>
       <Navbar />
@@ -28,8 +33,16 @@ function App() {
           path="/videos"
           element={<Videos />}
         />
+        <Route
+          path="/blog"
+          element={<Posts />}
+        />
+        <Route
+          path="/blog/:id"
+          element={<PostDetails />}
+        />
       </Routes>
-      <Footer/>
+      {showFooter && <Footer />}
     </div>
   );
 }

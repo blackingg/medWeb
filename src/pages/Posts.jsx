@@ -4,7 +4,7 @@ import { BlogPost } from "../data";
 
 const Posts = () => {
   const [currentPage, setCurrentPage] = useState(1); // Track the current page
-  const PostsPerPage = 6; // Define how many posts to show per page
+  const PostsPerPage = 8; // Define how many posts to show per page
   const navigate = useNavigate();
 
   // Get current posts based on pagination
@@ -59,8 +59,8 @@ const Posts = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 mb-[10%]">
-      <h1 className="text-3xl font-bold mb-6">Blog posts</h1>
+    <div className="container mx-auto px-4 py-8 mt-[2%] mb-[10%]">
+      <h1 className="text-3xl text-purple-500 font-bold mb-6">Blog posts</h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
         {currentPost.map((post) => (
           <div
@@ -74,12 +74,9 @@ const Posts = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-[#333]">
+              <h2 className="text-lg font-bold mb-2 text-[#333]">
                 {post.title}
               </h2>
-              <span className="text-[#6F4E37] font-semibold hover:underline">
-                View post
-              </span>
             </div>
           </div>
         ))}

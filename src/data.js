@@ -5,6 +5,17 @@ export const navItems = [
   { name: "Contact", to: "/contact" },
 ];
 
+export const Socials = [
+  { name: "Facebook", href: "#" },
+  { name: "Twitter", href: "#" },
+  { name: "Instagram", href: "#" },
+];
+
+export const Legal = [
+  { name: "Terms of Use", href: "#" },
+  { name: "Privacy Policy", href: "#" },
+];
+
 export const videos = [
   {
     id: 1,

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { videos } from "../data";
+import Search from "../components/Search";
 
 const VideoModal = ({ video, onClose }) => {
   const embedUrl = video.url.replace("watch?v=", "embed/");
@@ -45,6 +46,7 @@ const VideoModal = ({ video, onClose }) => {
 const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filteredVideos, setFilteredVideos] = useState(videos);
   const videosPerPage = 6;
 
   const openVideo = (video) => {
@@ -55,11 +57,22 @@ const Videos = () => {
     setSelectedVideo(null);
   };
 
+  const handleSearch = (searchTerm) => {
+    const filtered = videos.filter((video) =>
+      video.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredVideos(filtered);
+    setCurrentPage(1);
+  };
+
   const indexOfLastVideo = currentPage * videosPerPage;
   const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
-  const currentVideos = videos.slice(indexOfFirstVideo, indexOfLastVideo);
+  const currentVideos = filteredVideos.slice(
+    indexOfFirstVideo,
+    indexOfLastVideo
+  );
 
-  const totalPages = Math.ceil(videos.length / videosPerPage);
+  const totalPages = Math.ceil(filteredVideos.length / videosPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -101,6 +114,7 @@ const Videos = () => {
   return (
     <div className="container mx-auto px-4 py-8 mt-[2%] mb-[10%]">
       <h2 className="text-3xl text-purple-500 font-bold mb-6">Videos</h2>
+      <Search onSearch={handleSearch} />
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {currentVideos.map((video) => (
           <div
@@ -140,24 +154,31 @@ const Videos = () => {
           </div>
         ))}
       </div>
-      <div className="mt-8 flex justify-center">
-        {getPageNumbers().map((number, index) => (
-          <button
-            key={index}
-            onClick={() => number !== "..." && paginate(number)}
-            className={`mx-1 px-3 py-1 rounded ${
-              currentPage === number
-                ? "bg-purple-500 text-white"
-                : number === "..."
-                ? "bg-gray-100 text-gray-700 cursor-default"
-                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-            disabled={number === "..."}
-          >
-            {number}
-          </button>
-        ))}
-      </div>
+      {filteredVideos.length === 0 && (
+        <p className="text-center mt-8 text-gray-600">
+          No videos found matching your search.
+        </p>
+      )}
+      {filteredVideos.length > videosPerPage && (
+        <div className="mt-8 flex justify-center">
+          {getPageNumbers().map((number, index) => (
+            <button
+              key={index}
+              onClick={() => number !== "..." && paginate(number)}
+              className={`mx-1 px-3 py-1 rounded ${
+                currentPage === number
+                  ? "bg-purple-500 text-white"
+                  : number === "..."
+                  ? "bg-gray-100 text-gray-700 cursor-default"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+              disabled={number === "..."}
+            >
+              {number}
+            </button>
+          ))}
+        </div>
+      )}
       {selectedVideo && (
         <VideoModal
           video={selectedVideo}

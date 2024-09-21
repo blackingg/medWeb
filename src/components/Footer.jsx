@@ -2,8 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import getOnApple from "../assets/getOnApple.svg";
 import getOnPlaystore from "../assets/getOnPlaystore.svg";
+import { navItems, Socials, Legal } from "../data";
 
 const Footer = () => {
+  const handleLinkClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
   return (
     <footer className="relative bg-[#260e3b] text-white mt-16">
       <div className="absolute container -top-[7%] translate-y-3/4 md:-top-1/4 md:translate-y-3/4 left-1/2 -translate-x-1/2 bg-purple-600 p-5 rounded-xl h-fit w-[60%]">
@@ -33,80 +39,52 @@ const Footer = () => {
           <div className="w-full md:w-1/4 text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Links</h5>
             <ul className="mb-4">
-              <li className="mt-2">
-                <Link
-                  to="/"
-                  className="hover:underline"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link
-                  to="/videos"
-                  className="hover:underline"
-                >
-                  Videos
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link
-                  to="/"
-                  className="hover:underline"
-                >
-                  Contact
-                </Link>
-              </li>
+              {navItems.map((item) => (
+                <li className="mt-2">
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={handleLinkClick}
+                    className="hover:underline"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="w-full md:w-1/4 text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Legal</h5>
             <ul className="mb-4">
-              <li className="mt-2">
-                <Link
-                  to="/"
-                  className="hover:underline"
-                >
-                  Terms of Use
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link
-                  to="/"
-                  className="hover:underline"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+              {Legal.map((item) => (
+                <li className="mt-2">
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={handleLinkClick}
+                    className="hover:underline"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="w-full md:w-1/4 text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Social</h5>
             <ul className="mb-4">
-              <li className="mt-2">
-                <a
-                  href="#"
-                  className="hover:underline"
-                >
-                  Facebook
-                </a>
-              </li>
-              <li className="mt-2">
-                <a
-                  href="#"
-                  className="hover:underline"
-                >
-                  Twitter
-                </a>
-              </li>
-              <li className="mt-2">
-                <a
-                  href="#"
-                  className="hover:underline"
-                >
-                  Instagram
-                </a>
-              </li>
+              {Socials.map((item) => (
+                <li className="mt-2">
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={handleLinkClick}
+                    className="hover:underline"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="w-full md:w-1/4 text-center md:text-left">
@@ -114,15 +92,7 @@ const Footer = () => {
             <ul className="mb-4">
               <li className="mt-2">
                 <Link
-                  to="/"
-                  className="hover:underline"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link
-                  to="/"
+                  to="#"
                   className="hover:underline"
                 >
                   Careers

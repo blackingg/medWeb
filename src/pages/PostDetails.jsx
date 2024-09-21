@@ -22,14 +22,17 @@ const PostDetails = () => {
     <>
       {post ? (
         <div className="bg-white justify-center items-center px-[8%] lg:px-[15%] my-10">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-3xl font-bold text-purple-500">{post.title}</h1>
-            <button onClick={handleBackClick}>
+          <div className="flex items-center justify-start mb-4 lg:justify-left lg:relative">
+            <button
+              onClick={handleBackClick}
+              className="mr-4"
+            >
               <IoArrowBackCircle
-                size={30}
+                size={40}
                 className="text-purple-500"
               />
             </button>
+            <h1 className="text-3xl font-bold text-purple-500">{post.title}</h1>
           </div>
 
           <div className="py-5">
@@ -59,7 +62,7 @@ const PostDetails = () => {
             ))}
           </div>
 
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-start mt-6">
             <button
               onClick={handleBackClick}
               className="bg-purple-500 hover:bg-[#260e3b] text-white font-bold py-2 px-4 rounded transition-all"

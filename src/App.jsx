@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Posts from "./pages/Posts";
 import PostDetails from "./pages/PostDetails";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

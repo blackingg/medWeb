@@ -5,9 +5,18 @@ import { videos } from "../data";
 const VideoModal = ({ video, onClose }) => {
   const embedUrl = video.url.replace("watch?v=", "embed/");
 
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose(); // Close the modal when clicking outside the modal content
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg p-8 w-[90%] md:w-[80%] h-[80%]">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md flex justify-center items-center z-50"
+      onClick={handleBackdropClick}
+    >
+      <div className="bg-white rounded-lg px-8 pt-8 w-[90%] md:w-[80%] h-[80%]">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-xl font-bold">{video.title}</h3>
           <button

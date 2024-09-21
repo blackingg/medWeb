@@ -24,11 +24,9 @@ const Navbar = () => {
             <div>
               <Link
                 to="/"
-                className="flex items-center py-4 px-2"
+                className="flex items-center py-4 px-2 font-semibold text-gray-500 text-lg"
               >
-                <span className="font-semibold text-gray-500 text-lg">
-                  MedInfo
-                </span>
+                MedInfo
               </Link>
               <div className="absolute right-0 top-0 z-20 md:hidden">
                 <button

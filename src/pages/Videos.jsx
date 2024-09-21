@@ -100,7 +100,7 @@ const Videos = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">Videos</h2>
+      <h2 className="text-3xl text-purple-500 font-bold mb-6">Videos</h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {currentVideos.map((video) => (
           <div
@@ -133,7 +133,9 @@ const Videos = () => {
               </div>
             </div>
             <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{video.title}</h3>
+              <h3 className="font-semibold text-purple-600 text-lg mb-2">
+                {video.title}
+              </h3>
             </div>
           </div>
         ))}

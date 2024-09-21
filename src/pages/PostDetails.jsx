@@ -23,11 +23,8 @@ const PostDetails = () => {
       {post ? (
         <div className="bg-white justify-center items-center px-[8%] lg:px-[15%] my-10">
           <div className="flex justify-between items-center mb-4">
-            <h1 className="text-3xl font-bold text-[#6F4E37]">{post.title}</h1>
-            <button
-              onClick={handleBackClick}
-              className="text-gray-500 hover:text-gray-700"
-            >
+            <h1 className="text-3xl font-bold text-purple-500">{post.title}</h1>
+            <button onClick={handleBackClick}>
               <IoArrowBackCircle
                 size={30}
                 className="text-purple-500"
@@ -41,9 +38,14 @@ const PostDetails = () => {
               alt={post.title}
               className="w-full max-h-[300px] object-cover rounded-lg mb-4"
             />
-            <p className="text-purple-500 text-xl font-bold capitalize">
-              {post.author}
-            </p>
+            <div className="flex items-center space-x-5 text-center">
+              <p className="text-purple-500 text-xl font-bold capitalize">
+                {post.author}
+              </p>
+              <p className="text-purple-300 text-sm font-bold capitalize">
+                {post.date}
+              </p>
+            </div>
           </div>
 
           <div className="overflow-y-auto lg:w-[70%]">

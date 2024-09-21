@@ -58,7 +58,8 @@ export const BlogPost = [
     id: 1,
     title: "Understanding Diabetes",
     image: "/img/blog1.jpg",
-    author: "Lorem ipsum",
+    author: "Allen ipsum",
+    date: "September 12, 2024",
     details:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
     content:
@@ -68,9 +69,8 @@ export const BlogPost = [
     id: 2,
     title: "Understanding Diabetes",
     image: "/img/blog2.jpg",
-    author: "Lorem ipsum",
-    details:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
+    author: "Lorem Slade",
+    date: "October 5, 2024",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae?",
   },
@@ -78,9 +78,8 @@ export const BlogPost = [
     id: 3,
     title: "Understanding Diabetes",
     image: "/img/blog1.jpg",
-    author: "Lorem ipsum",
-    details:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
+    author: "John Wick",
+    date: "November 20, 2024",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae?",
   },
@@ -88,9 +87,8 @@ export const BlogPost = [
     id: 4,
     title: "Understanding Diabetes",
     image: "/img/blog2.jpg",
-    author: "Lorem ipsum",
-    details:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
+    author: "Clark Kent",
+    date: "December 1, 2024",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae?",
   },
@@ -98,9 +96,8 @@ export const BlogPost = [
     id: 5,
     title: "Understanding Diabetes",
     image: "/img/blog1.jpg",
-    author: "Lorem ipsum",
-    details:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
+    author: "Johnny Depp",
+    date: "January 15, 2025",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae?",
   },
@@ -108,9 +105,8 @@ export const BlogPost = [
     id: 6,
     title: "Understanding Diabetes",
     image: "/img/blog2.jpg",
-    author: "Lorem ipsum",
-    details:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?",
+    author: "Tope Abilekan",
+    date: "February 10, 2025",
     content:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat?  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae? Repudiandae optio nostrum adipisci aspernatur tenetur modi nobis ipsum nulla praesentium consequatur asperiores officiis cupiditate, quis doloremque fugiat? \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ad omnis recusandae?",
   },

@@ -20,7 +20,7 @@ const Posts = () => {
   // Function to generate page numbers
   const getPageNumbers = () => {
     const pageNumbers = [];
-    const showPages = 6;
+    const showPages = 5;
 
     if (totalPages <= showPages + 2) {
       // Display all page numbers if total pages are within limit

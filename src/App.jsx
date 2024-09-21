@@ -8,6 +8,7 @@ import Videos from "./pages/Videos";
 import Footer from "./components/Footer";
 import Posts from "./pages/Posts";
 import PostDetails from "./pages/PostDetails";
+import Contact from "./pages/Contact";
 
 function App() {
   const location = useLocation();
@@ -36,6 +37,10 @@ function App() {
         <Route
           path="/blog"
           element={<Posts />}
+        />
+        <Route
+          path="/contact"
+          element={<Contact />}
         />
         <Route
           path="/blog/:id"

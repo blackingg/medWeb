@@ -9,6 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,8 +23,14 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
+    setIsSubmitted(true);
     // Reset form after submission
     setFormData({ name: "", email: "", message: "" });
+
+    // Optional: reset the submission status after a few seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000); // hide after 5 seconds
   };
 
   return (
@@ -32,6 +39,12 @@ const Contact = () => {
         <div className="text-center">
           <h1 className="text-3xl font-bold text-purple-500">Contact Us</h1>
         </div>
+
+        {isSubmitted && (
+          <div className="text-center text-green-600 font-bold">
+            Message sent successfully!
+          </div>
+        )}
 
         <form
           onSubmit={handleSubmit}

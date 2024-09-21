@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={`absolute flex flex-col md:hidden bg-white w-[40%] z-40 top-14 right-0 ${
+              className={`absolute flex flex-col md:hidden bg-gray-100 px-2 pb-2 w-[40%] z-40 top-14 right-0 rounded-b-md ${
                 isOpen ? "block" : "hidden"
               }`}
             >
@@ -56,14 +56,14 @@ const Navbar = () => {
                 <Link
                   to="/login"
                   onClick={handleLinkClick}
-                  className="py-4 px-2 w-full font-medium text-gray-500 hover:bg-purple-500 hover:text-white transition duration-300"
+                  className="py-4 px-4 w-full font-medium text-gray-500 hover:bg-purple-500 transition duration-300"
                 >
                   Log In
                 </Link>
                 <Link
                   to="/signup"
                   onClick={handleLinkClick}
-                  className="py-4 px-2 w-full font-medium text-white bg-purple-500 hover:bg-purple-400 transition duration-300"
+                  className="py-4 px-4 rounded-md w-full font-medium text-white bg-purple-500 hover:bg-purple-400 transition duration-300"
                 >
                   Sign Up
                 </Link>

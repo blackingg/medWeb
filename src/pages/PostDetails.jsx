@@ -21,7 +21,7 @@ const PostDetails = () => {
   return (
     <>
       {post ? (
-        <div className="bg-white justify-center items-center px-[8%] lg:px-[15%] py-10">
+        <div className="bg-white justify-center items-center px-[8%] lg:px-[15%] my-10">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-3xl font-bold text-[#6F4E37]">{post.title}</h1>
             <button

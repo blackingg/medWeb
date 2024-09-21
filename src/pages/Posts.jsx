@@ -59,10 +59,8 @@ const Posts = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 mb-[10%]">
       <h1 className="text-3xl font-bold mb-6">Blog posts</h1>
-
-      {/* Blog post grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
         {currentPost.map((post) => (
           <div

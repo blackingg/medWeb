@@ -99,7 +99,7 @@ const Videos = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 mb-[10%]">
       <h2 className="text-3xl text-purple-500 font-bold mb-6">Videos</h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {currentVideos.map((video) => (

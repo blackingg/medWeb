@@ -4,11 +4,11 @@ import VideoGrid from "../components/VideoGrid";
 
 function Home() {
   return (
-    <>
+    <div className="mb-[10%] space-y-[5%]">
       <Hero />
       <PostGrid />
       <VideoGrid />
-    </>
+    </div>
   );
 }
 
